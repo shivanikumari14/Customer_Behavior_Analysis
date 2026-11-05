@@ -89,7 +89,7 @@ Python | Pandas | NumPy | EDA | Data Cleaning | SQL | MySQL | Power BI | Data Vi
 Aspiring Data Analyst
 
 - GitHub: [My GitHub Profile](https://github.com/shivanikumari14)
-- LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/shivani-kumari)
+- LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/shivani-kumari-283495286/)
 
 ---
 
