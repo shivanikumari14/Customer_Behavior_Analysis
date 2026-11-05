@@ -1,193 +1,96 @@
-# Customer Shopping Behavior Analysis
+# 🛍️ Customer Shopping Behavior Analysis
 
-## 1. Project Overview
+## 📌 Overview
 
-This project focuses on analyzing customer shopping behavior using transactional data from **3,900 purchases** across different product categories.
+This project analyzes customer shopping behavior using transactional data from 3,900 purchases. The objective is to identify customer purchasing patterns, spending trends, product preferences, and subscription behavior to generate meaningful business insights.
 
-The main objective is to understand customer purchasing patterns, spending behavior, product preferences, subscription trends, and customer segments to generate meaningful business insights.
+This end-to-end data analytics project covers data cleaning, exploratory data analysis (EDA), SQL analysis, Power BI dashboard development, and business reporting.
 
-The project follows an end-to-end data analytics workflow, starting with data loading and cleaning in Python, performing business analysis using MySQL, and presenting insights through an interactive Power BI dashboard and a project report.
+## 📊 Dataset
 
-## 2. Dataset
+- Total Records: 3,900
+- Total Columns: 18
+- Missing Values: 37 in the Review Rating column
 
-- **Total Records:** 3,900
-- **Total Columns:** 18
-- **Dataset Type:** Customer Shopping Transaction Data
+The dataset includes customer demographics, purchase details, product categories, discounts, subscription status, shipping types, and shopping frequency.
 
-### Key Features
+## 🛠️ Tools & Technologies
 
-- Customer Demographics: Age, Gender, Location, Subscription Status
-- Purchase Details: Item Purchased, Category, Purchase Amount, Season, Size, Color
-- Shopping Behavior: Discount Applied, Promo Code Used, Previous Purchases, Frequency of Purchases
-- Customer Feedback: Review Rating
-- Delivery Information: Shipping Type
+- **Python:** Data analysis and data cleaning
+- **Pandas & NumPy:** Data manipulation
+- **Jupyter Notebook:** Exploratory Data Analysis
+- **MySQL:** SQL queries and business analysis
+- **Power BI:** Interactive dashboard creation
+- **Gamma:** Project presentation
+- **GitHub:** Project documentation and version control
 
-### Data Cleaning
+## 🔄 Project Steps
 
-- Handled 37 missing values in the Review Rating column using category-wise median imputation.
-- Standardized column names into snake_case.
-- Created age_group using age-based quartile segmentation.
-- Created purchase_frequency_days to convert shopping frequency into numerical days.
-- Checked discount_applied and promo_code_used for redundancy and dropped promo_code_used.
-
-## 3. Tools & Technologies
-
-| Tool | Purpose |
-|---|---|
-| Python | Data analysis and preprocessing |
-| Pandas | Data manipulation and cleaning |
-| Jupyter Notebook | Writing and executing Python code |
-| MySQL | Database management and SQL analysis |
-| SQL | Business queries and customer segmentation |
-| Power BI | Interactive dashboard creation |
-| Gamma AI | Project presentation (PPT) |
-
-## 4. Project Workflow
-
-### Step 1: Data Loading & Exploration (Python)
-
+### 1. Data Loading & EDA (Python)
 - Imported the dataset using Pandas.
-- Explored the dataset using `head()`, `info()`, and `describe()`.
-- Checked missing values and data types.
-- Understood the structure of the dataset.
+- Explored data structure and summary statistics.
+- Identified missing values and checked data quality.
+- Analyzed customer and purchase-related information.
 
-### Step 2: Data Cleaning & Feature Engineering (Python)
-
-- Handled missing values using category-wise median imputation.
+### 2. Data Cleaning (Python)
+- Handled missing review ratings using category-wise median values.
 - Standardized column names.
-- Created age groups: Young Adult, Adult, Middle-aged, and Senior.
-- Converted purchase frequency into numerical days.
-- Removed redundant columns after checking data consistency.
+- Created age groups.
+- Created purchase frequency features.
+- Checked data consistency and removed redundant columns.
 
-### Step 3: Database Integration (MySQL)
+### 3. SQL Analysis (MySQL)
 
-- Connected Python with MySQL using SQLAlchemy and mysql-connector-python.
-- Created a database named `customer_behavior`.
-- Loaded the cleaned DataFrame into a MySQL table named `customer`.
+Connected Python with MySQL and performed business analysis using SQL queries.
 
-### Step 4: Business Analysis (MySQL)
+Key business questions:
+1. Revenue by Gender.
+2. High-Spending Customers Using Discounts.
+3. Top 5 Products by Rating.
+4. Standard vs. Express Shipping Comparison.
+5. Subscribers vs. Non-Subscribers Analysis.
+6. Discount-Dependent Products.
+7. Customer Segmentation (New, Returning, Loyal).
+8. Top 3 Products by Category.
+9. Repeat Buyers and Subscription Analysis.
+10. Revenue by Age Group.
 
-Performed SQL analysis to answer 10 important business questions:
+### 4. Power BI Dashboard
 
-1. Revenue comparison between male and female customers.
-2. Identification of high-spending customers who used discounts.
-3. Top 5 products based on average review ratings.
-4. Comparison of average purchase amounts for Standard and Express shipping.
-5. Spending and revenue comparison between subscribers and non-subscribers.
-6. Identification of products with the highest percentage of discounted purchases.
-7. Customer segmentation into New, Returning, and Loyal customers.
-8. Identification of the top 3 most purchased products in each category.
-9. Analysis of the relationship between repeat purchases and subscriptions.
-10. Revenue contribution by age group.
+Developed an interactive dashboard to visualize customer shopping behavior, purchase trends, revenue distribution, product performance, and subscription patterns.
 
-### Step 5: Dashboard Development (Power BI)
+### 5. Reporting & Presentation
 
-- Connected and imported the analyzed data.
-- Created an interactive dashboard.
-- Used visualizations to present customer behavior and purchasing trends.
-- Presented important business metrics and insights in an easy-to-understand format.
+- Created a detailed project report.
+- Prepared a business problem document.
+- Developed a project presentation using Gamma.
+- Summarized key findings and business recommendations.
 
-### Step 6: Project Report & Presentation
+## 📈 Dashboard
 
-- Created a detailed project report summarizing the analysis and business recommendations.
-- Used Gamma AI to prepare a professional PowerPoint presentation explaining the project workflow, analysis, and findings.
+The Power BI dashboard provides an interactive view of customer shopping behavior and helps identify important business trends.
 
-## 5. Power BI Dashboard
+## 💡 Business Recommendations
 
-The Power BI dashboard provides a visual overview of customer shopping behavior and helps understand purchasing trends and business performance.
+- Encourage customer subscriptions through exclusive benefits.
+- Introduce loyalty programs for repeat customers.
+- Optimize discount strategies to maintain profitability.
+- Promote top-rated and best-selling products.
+- Focus marketing campaigns on high-revenue customer segments.
 
+## 🎯 Key Skills Demonstrated
 
-## 6. Key Results & Business Recommendations
+Python | Pandas | NumPy | EDA | Data Cleaning | SQL | MySQL | Power BI | Data Visualization | Business Analysis | Data Storytelling
 
-Based on the analysis, the following business recommendations were identified:
+## 👩‍💻 Author
 
-- **Boost Subscriptions:** Promote exclusive benefits to encourage more customers to subscribe.
-- **Customer Loyalty Programs:** Reward repeat buyers to encourage them to become loyal customers.
-- **Review Discount Policies:** Balance discount strategies with profitability and margin control.
-- **Product Positioning:** Highlight top-rated and best-selling products in marketing campaigns.
-- **Targeted Marketing:** Focus marketing efforts on high-revenue age groups and Express shipping users.
+**Shivani Kumari**
 
-## 7. Project Deliverables
+Aspiring Data Analyst
 
-| Deliverable | File |
-|---|---|
-| Python Analysis | Customer_Shopping_Behavior_Analysis.ipynb |
-| SQL Analysis | SQL queries file |
-| Power BI Dashboard | Customer_Shopping_Behavior_Dashboard.pbix |
-| Project Report | Customer Shopping Behavior Analysis Report.pdf |
-| Presentation | Gamma AI PPT |
-
-## 8. How to Run This Project
-
-Follow these steps to reproduce the analysis:
-
-**Prerequisites:**
-- Python 3.x
-- Jupyter Notebook
-- MySQL Server
-- Power BI Desktop
-
-**Step 1: Clone the Repository**
-
-```bash
-git clone https://github.com/ShivaniKumari/customer-shopping-behavior-analysis.git
-```
-
-**Step 2: Navigate to the Project Folder**
-
-```bash
-cd customer-shopping-behavior-analysis
-```
-
-**Step 3: Install Required Python Libraries**
-
-```bash
-pip install pandas sqlalchemy mysql-connector-python jupyter
-```
-
-**Step 4: Open Jupyter Notebook**
-
-```bash
-jupyter notebook
-```
-
-Open `Customer_Shopping_Behavior_Analysis.ipynb` and execute the cells.
-
-**Step 5: Configure MySQL Connection**
-
-Update your MySQL username, password, host, port, and database details in the notebook.
-
-**Step 6: Run SQL Queries**
-
-Execute the SQL queries using MySQL Workbench or another MySQL client.
-
-**Step 7: Open Power BI Dashboard**
-
-Open the `.pbix` file in Power BI Desktop to explore the dashboard.
-
-## 9. Skills Demonstrated
-
-- Data Cleaning & Preprocessing
-- Exploratory Data Analysis (EDA)
-- Python & Pandas
-- SQL & MySQL
-- Data Manipulation
-- Customer Segmentation
-- Business Analysis
-- Data Visualization
-- Power BI Dashboard Development
-- Business Insights & Reporting
-
-## 10. Conclusion
-
-This project demonstrates an end-to-end data analytics workflow, from raw data preparation to business insights and interactive visualization.
-
-By combining Python, MySQL, and Power BI, the project helps transform raw customer transaction data into meaningful information that can support data-driven business decisions.
+- GitHub: [Your GitHub Profile](https://github.com/your-username)
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
 
 ---
 
-**Project Type:** End-to-End Data Analytics Project
-
-**Created by:** Shivani Kumari
-
-**Role:** Aspiring Data Analyst
+⭐ If you find this project useful, feel free to explore the repository!
